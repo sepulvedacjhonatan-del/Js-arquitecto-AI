@@ -1,0 +1,183 @@
+{
+  "app_name": "js.AI",
+  "personality": "5 Brutalist Mobile",
+  "personality_one_liner": "A sharp, function-first, industrial-tech environment designed for an AI app-creator, emphasizing raw code capability over soft AI tropes.",
+  "color": {
+    "surface": "#FFFFFF",
+    "onSurface": "#000000",
+    "surfaceSecondary": "#F5F5F5",
+    "onSurfaceSecondary": "#333333",
+    "surfaceTertiary": "#E5E5E5",
+    "onSurfaceTertiary": "#000000",
+    "surfaceInverse": "#000000",
+    "onSurfaceInverse": "#FFFFFF",
+    "brand": "#FF5722",
+    "brandPrimary": "#FF5722",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#E64A19",
+    "onBrandSecondary": "#FFFFFF",
+    "brandTertiary": "#FFCCBC",
+    "onBrandTertiary": "#D84315",
+    "success": "#00C853",
+    "onSuccess": "#FFFFFF",
+    "warning": "#FFD600",
+    "onWarning": "#000000",
+    "error": "#D50000",
+    "onError": "#FFFFFF",
+    "info": "#2979FF",
+    "onInfo": "#FFFFFF",
+    "border": "#E0E0E0",
+    "borderStrong": "#000000",
+    "divider": "#EEEEEE",
+    "dark": {
+      "surface": "#000000",
+      "onSurface": "#FFFFFF",
+      "surfaceSecondary": "#1A1A1A",
+      "onSurfaceSecondary": "#CCCCCC",
+      "surfaceTertiary": "#2A2A2A",
+      "onSurfaceTertiary": "#FFFFFF",
+      "surfaceInverse": "#FFFFFF",
+      "onSurfaceInverse": "#000000",
+      "brand": "#FF5722",
+      "brandPrimary": "#FF5722",
+      "onBrandPrimary": "#FFFFFF",
+      "brandSecondary": "#FF7043",
+      "onBrandSecondary": "#000000",
+      "brandTertiary": "#3E2723",
+      "onBrandTertiary": "#FFAB91",
+      "success": "#00E676",
+      "onSuccess": "#000000",
+      "warning": "#FFEE58",
+      "onWarning": "#000000",
+      "error": "#FF5252",
+      "onError": "#000000",
+      "info": "#448AFF",
+      "onInfo": "#FFFFFF",
+      "border": "#333333",
+      "borderStrong": "#FFFFFF",
+      "divider": "#222222"
+    }
+  },
+  "typography": {
+    "displayFontFamily": "Space Grotesk",
+    "textFontFamily": "Space Mono",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Rigid grids, hard alignment, intentional whitespace imbalance. Use thick borders structurally.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 0,
+    "md": 0,
+    "lg": 0,
+    "pill": 0
+  },
+  "shadow_tier": "0",
+  "navigation": "drawer",
+  "icon_set": "Feather",
+  "glassmorphism": {
+    "enabled": "false",
+    "do's": [],
+    "dont's": [
+      "Do not use blur or glass. Brutalist personality forbids it. Use solid surfaceSecondary or brandTertiary."
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "solid surfaceSecondary",
+      "android": "solid surfaceSecondary",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "none",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Auth (Login/Register)",
+      "purpose": "A stark, structural entry point that emphasizes the tool's raw utility.",
+      "states": {
+        "loading": "Monospace spinner.",
+        "empty": "N/A",
+        "error": "Sharp red warning block."
+      },
+      "layout": "Use edge-to-edge sections with thick structural borders. Huge 'js.AI' display typography at the top. Hard-edged inputs (2pt borderStrong on focus). A single strong Industrial Orange primary button at the bottom."
+    },
+    {
+      "name": "Chat (Main)",
+      "purpose": "The core app-creation interface where the user chats with the AI agent.",
+      "states": {
+        "loading": "Blinking cursor or skeleton.",
+        "empty": "Massive 'js.AI' translucent mono typography watermark centered on the screen. A few rigid suggestion chips at the bottom.",
+        "error": "Inline error block with 'Retry' mechanical button."
+      },
+      "layout": "Left drawer hamburger menu top-left. Chat bubbles are hard rectangles (0 radius) - user bubbles in surfaceSecondary, AI bubbles in surface (no background) with border dividers. Input field is a rigid box pinned to bottom with safe-area. Use Space Mono for any generated code blocks with a dark surfaceTertiary background regardless of theme."
+    },
+    {
+      "name": "Drawer Menu",
+      "purpose": "Left-side slide-in navigation for History, Settings, Theme, About, Language.",
+      "states": {
+        "loading": "N/A",
+        "empty": "N/A",
+        "error": "N/A"
+      },
+      "layout": "Full height overlay sliding from left. Hard right border (2pt). Huge structural headers. Navigation items are large text blocks. Include a theme toggle (switch or text flip) and list of past chat sessions."
+    },
+    {
+      "name": "Settings",
+      "purpose": "Configure the tool's environment (Theme, Language, Account).",
+      "states": {
+        "loading": "N/A",
+        "empty": "N/A",
+        "error": "N/A"
+      },
+      "layout": "List of configuration rows with exposed system states (visible toggles, mono labels). Segmented controls for Light/Dark mode with sharp borders."
+    }
+  ],
+  "images": {
+    "js_ai_watermark": {
+      "url": "https://images.unsplash.com/photo-1632882765546-1ee75f53becb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwb3JhbmdlJTIwYmxhY2slMjB0ZWNoJTIwbG9nb3xlbnwwfHx8fDE3ODc4NDczMjN8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "js.AI abstract brutalist tech logo"
+    },
+    "drawer_hero_bg": {
+      "url": "https://images.unsplash.com/photo-1574968772224-cafc2745dde1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdyYXBoaWMlMjBkZXNpZ24lMjBwb3N0ZXIlMjBvcmFuZ2UlMjBibGFja3xlbnwwfHx8fDE3ODc4NDczMjN8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract orange and black graphic texture for drawer header"
+    },
+    "user_avatar": {
+      "url": "https://images.unsplash.com/photo-1758613654360-45f1ff78c0cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90JTIwY2xlYW4lMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc4Nzg0NzMyM3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "User profile avatar"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Build a Brutalist Mobile interface (Personality 5). All borders and corners must be sharp (radius 0). Do not use rounded corners anywhere.",
+    "Implement the 'js.AI' watermark prominently in the center of the empty chat state. Use oversized Space Mono typography with low opacity or the provided watermark image.",
+    "Do not use generic AI purple/violet gradients. The color palette is stark monochrome with an Industrial Orange (brand) accent.",
+    "The primary navigation MUST be a left-side drawer as requested ('menú desplegable al lado izquierdo'). Do not implement bottom tabs.",
+    "Ensure chat bubbles have no border radius. User bubbles should be solid surfaceSecondary; AI bubbles can just be text on the main surface with an industrial border separator.",
+    "Any code blocks generated by the AI must use Space Mono font and be styled distinctively from normal text (e.g., surfaceTertiary background).",
+    "Implement real-time streaming text effects for AI responses to make it feel like a terminal/builder environment.",
+    "Include Theme (light/dark) toggle in the drawer menu as explicitly requested."
+  ],
+  "haptics": {
+    "primary_button_press": "impactMedium",
+    "drawer_open": "impactLight",
+    "theme_toggle": "impactMedium",
+    "message_sent": "impactLight",
+    "message_received": "notificationSuccess"
+  }
+}
